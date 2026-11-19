@@ -73,6 +73,10 @@ body {
     
 }
 
+.nav-links a:hover{
+  color: var(--accent);
+}
+
 a, .nav-btn{
     text-decoration: none;
     color: var(--text-light);
@@ -85,6 +89,11 @@ a, .nav-btn{
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: 600;
+}
+
+.nav-btn:hover{
+    background-color: var(--surface);
+    color: var(--text-light);
 }
 
 /* Hero Section */
@@ -133,6 +142,11 @@ a, .nav-btn{
     text-decoration: none;
     font-weight: 600;
     color: var(--bg-dark);
+}
+
+.hero-btn:hover{
+background: var(--surface);
+color: var(--text-light);
 }
 
 /* Skills Section */
@@ -328,8 +342,13 @@ border-radius: 10px;
     border-radius: 8px;
     cursor: pointer;
     margin-top: 8px;
-    color: var(--text-light);
+    color: var(--bg-dark);
     font-weight: 600;
+}
+
+.contact-right button:hover{
+    background-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
 .footer{
