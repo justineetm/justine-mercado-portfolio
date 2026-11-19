@@ -9,7 +9,19 @@ const projectImages = document.querySelectorAll(".project-card img");
 const imageModal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-img");
 const closeModal = document.getElementById("close-modal");
+const navbar = document.querySelector(".navbar");
+let lastScrollY = window.scrollY;
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY && window.scrollY > 80) {
+    // Scrolling down: hide navbar
+    navbar.classList.add("navbar-hidden");
+  } else {
+    // Scrolling up: show navbar
+    navbar.classList.remove("navbar-hidden");
+  }
+  lastScrollY = window.scrollY;
+});
 filterButtons.forEach((button) => {
     button.addEventListener('click', ()=>{
 filterButtons.forEach((btn =>{

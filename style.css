@@ -24,14 +24,18 @@ body {
 
 /* Header/Navigation Section */
 .navbar{
-    position: fixed;
+  position: fixed;
     top: 0;
     left: 0;
-    background: transparent;
-    z-index: 10;
     width: 100%;
+    z-index: 1000;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border-olive);
+    transition: transform 0.3s ease;
 }
-
+.navbar-hidden {
+    transform: translateY(-100%);
+}
 .nav-container{
     display: flex;
     justify-content: space-between;
@@ -476,11 +480,13 @@ border-radius: 10px;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--surface);
+    background-color: var(--bg-dark);
     flex-direction: column;
-    padding: 20px 0;
-    gap: 16px;
-    border-bottom: 1px solid var(--border-olive);
+    align-items: center;
+    padding: 24px 0;
+    gap: 20px;
+    border-bottom: 1px solid var(--muted-sage);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .nav-links.show {
