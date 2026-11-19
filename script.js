@@ -1,6 +1,8 @@
 const filterButtons = document.querySelectorAll('.filter-btn')
 const projectCards = document.querySelectorAll('.project-card')
 const emptyMessage = document.querySelector('.empty-message')
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
 
 
 filterButtons.forEach((button) => {
@@ -27,4 +29,29 @@ button.classList.add('active-btn')
             }
 });
 
+});
+contactForm.addEventListener("submit", async function (event) {
+  // 1. Stop the browser from redirecting to Formspree's page
+  event.preventDefault();
+
+  // 2. Pack up all the inputs (name, email, message) from the form
+  const formData = new FormData(contactForm);
+  formStatus.textContent = "Sending...";
+
+  // 3. Send the data to your Formspree URL silently in the background
+  const response = await fetch(contactForm.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  // 4. Show confirmation text and clear the boxes if it worked
+  if (response.ok) {
+    formStatus.textContent = "Message sent! Thanks for reaching out.";
+    contactForm.reset();
+  } else {
+    formStatus.textContent = "Oops! Something went wrong. Please try again.";
+  }
 });

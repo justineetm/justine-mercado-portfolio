@@ -120,7 +120,7 @@
             <div class="contact-right" id="contact">
                 <h2>Contact Me</h2>
                 <p>You can contact and talk with me by filling up the form below &darr;</p>
-                <form>
+                <form id="contact-form" action="https://formspree.io/f/xnpdvydr" method="POST">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" required>
                     <label for="email">Email</label>
@@ -128,6 +128,7 @@
                     <label for="message">Message</label>
                     <textarea name="message" id="message" required></textarea>
                     <button type="submit">Submit</button>
+                    <p id="form-status"></p>
                 </form>
             </div>
             </div>
