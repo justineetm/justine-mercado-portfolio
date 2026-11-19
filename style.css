@@ -6,7 +6,10 @@
   --text-light: #F2F4F3;
   --accent: #A3B8AC;
 }
-
+html{
+    scroll-padding: 95px;
+    scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +53,9 @@ body {
     align-items: center;
     gap: 14px;
 }
+.hamburger, .mobile-contact{
+    display: none;
+}
 
 .hamburger{
     display: none;
@@ -75,7 +81,7 @@ a, .nav-btn{
 
 .nav-btn{
     background-color: var(--accent);
-    color: var(--text-light);
+    color: var(--bg-dark);
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: 600;
@@ -361,6 +367,13 @@ border-radius: 10px;
 
     .nav-container {
         padding: 16px 20px;
+    }
+    .nav-btn{
+        display: none;
+    }
+
+    .hamburger, .mobile-contact{
+        display: block;
     }
 
     .hero {
