@@ -19,7 +19,12 @@ html{
 body {
   background-color: var(--bg-dark);
   color: var(--text-light);
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+button, input, textarea{
+    font-family: inherit;
 }
 
 /* Header/Navigation Section */
@@ -338,6 +343,19 @@ border-radius: 10px;
     min-height: 120px;
     resize: vertical;
 }
+.about-left h2, .contact-right h2 {
+    margin-bottom: 12px;
+}
+
+.about-left p, .contact-right p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-right label {
+    margin-top: 6px;
+    font-weight: 600;
+}
 
 .contact-right button{
     background-color: var(--muted-sage);
@@ -464,7 +482,7 @@ border-radius: 10px;
     .about-left, .contact-right {
         width: 100%;
     }
-
+    
     .footer-container {
         flex-direction: column;
         gap: 14px;
