@@ -5,6 +5,10 @@ const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
+const projectImages = document.querySelectorAll(".project-card img");
+const imageModal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+const closeModal = document.getElementById("close-modal");
 
 filterButtons.forEach((button) => {
     button.addEventListener('click', ()=>{
@@ -79,5 +83,23 @@ window.addEventListener("scroll", () => {
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".navbar")) {
     navLinks.classList.remove("show");
+  }
+});
+projectImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    modalImg.src = img.src;
+    imageModal.style.display = "flex";
+  });
+});
+
+// Close when clicking the X button
+closeModal.addEventListener("click", () => {
+  imageModal.style.display = "none";
+});
+
+// Close when clicking the dark background outside the image
+imageModal.addEventListener("click", (event) => {
+  if (event.target === imageModal) {
+    imageModal.style.display = "none";
   }
 });
