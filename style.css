@@ -393,18 +393,20 @@ border-radius: 10px;
 }
 
 .modal-content {
-    max-width: 90%;
-    max-height: 85vh;
+    max-width: 85%;
+    max-height: 75vh;
+    margin-top: 24px;
     border-radius: 8px;
     border: 1px solid var(--border-olive);
 }
 
 .close-modal {
     position: absolute;
-    top: 20px;
-    right: 32px;
+    top: 14px;
+    right: 20px;
     color: var(--text-light);
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1;
     cursor: pointer;
 }
 
