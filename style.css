@@ -45,6 +45,20 @@ body {
     gap: 60px;
 }
 
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.hamburger{
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
 .nav-links{
     list-style: none;
     display: flex;
@@ -389,4 +403,24 @@ border-radius: 10px;
         gap: 14px;
         text-align: center;
     }
+    .hamburger {
+    display: block;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--surface);
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 16px;
+    border-bottom: 1px solid var(--border-olive);
+}
+
+.nav-links.show {
+    display: flex;
+}
 }

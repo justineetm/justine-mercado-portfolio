@@ -3,7 +3,8 @@ const projectCards = document.querySelectorAll('.project-card')
 const emptyMessage = document.querySelector('.empty-message')
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
-
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
 
 filterButtons.forEach((button) => {
     button.addEventListener('click', ()=>{
@@ -54,4 +55,15 @@ contactForm.addEventListener("submit", async function (event) {
   } else {
     formStatus.textContent = "Oops! Something went wrong. Please try again.";
   }
+});
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// Close the dropdown automatically when a visitor taps a link
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
 });
