@@ -339,3 +339,54 @@ border-radius: 10px;
     display: none;
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-container {
+        padding: 16px 20px;
+    }
+
+    .hero {
+        padding-top: 110px;
+        padding-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2, .span-skill {
+        font-size: 1.3rem;
+    }
+
+    .project-filters {
+        flex-wrap: wrap;
+    }
+
+    .horizontal-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .about-contact-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about-left, .contact-right {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+}
