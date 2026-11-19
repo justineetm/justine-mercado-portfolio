@@ -67,3 +67,17 @@ navLinks.querySelectorAll("a").forEach((link) => {
     navLinks.classList.remove("show");
   });
 });
+
+// Close the menu automatically when the user scrolls
+window.addEventListener("scroll", () => {
+  if (navLinks.classList.contains("show")) {
+    navLinks.classList.remove("show");
+  }
+});
+
+// Close the menu when tapping anywhere outside the navbar
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".navbar")) {
+    navLinks.classList.remove("show");
+  }
+});
